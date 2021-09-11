@@ -27,18 +27,19 @@ function my_rm()
    #check for the existence of the file with the same name , if exists rename it to file1.txt
    if [[ -f "$file" ]]
    then 
-   mv "$file" file0.txt
+   file_subs="${file%.*}"
+   mv "$file" "${file_subs}0.txt"
    
    #Again move one directory up and then change the name of the current file 
    cd ..
-   mv "$file" file1.txt
-   mv file1.txt my-deleted-files
+   mv "$file" "${file_subs}1.txt"
+   mv "${file_subs}1.txt" my-deleted-files
    else 
    cd ..
    mv "$file" my-deleted-files
    fi
    fi
-   
+    
 }
 
 

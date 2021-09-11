@@ -1,8 +1,0 @@
-Hello! This is Saurabh Mukherjee
-The purpose of this file is to count
-the number of lines present in this file and 
-then display it as an output on the terminal 
-.The bash script has been written for the purpose.
-We are taking the name of the file and then counting the 
-lines till we encounter the end of the file and then increment the 
-counter each time we find a new line.
